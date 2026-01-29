@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./author.css">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <container class="container">
+        <div class="author">
+            <h1 style="text-align: center;">ბუტიკი</h1>
+            <div class="bar"></div>
+
+            <form id="registerForm" action="./main.html">
+                <div>
+                    <p>იმეილი</p>
+                    <input 
+                        type="text"
+                        id="email"
+                        placeholder="შეიყვანეთ იმეილი"
+                    >
+                    <small id="emailError" style="color:black; display:block; "></small>
+                </div>
+
+                <div>
+                    <p>პაროლი</p>
+                    <input 
+                        type="password"
+                        id="password"
+                        placeholder="***********"
+                    >
+                    <small id="passwordStrength" style="display:block;"></small>
+                </div>
+
+                <div class="checkd">
+                    <input class="check" type="checkbox"> 
+                    <p class="checkt">დამიმახსოვრე</p>
+                </div>
+
+                <div>
+                    <input 
+                        class="log"
+                        type="submit"
+                        value="ავტორიზაცია"
+                    >
+                </div>
+            </form>
+        </div>
+    </container>
+
+    <script src="./author.js">
+    const email = localStorage.getItem("authEmail");
+    const password = localStorage.getItem("authPassword");
+
+    if (email && password) {
+        alert(
+            "წარმატებით გაიაზრეთ ავტორიზაცია\n\n" +
+            "იმეილი: " + email + "\n" +
+            "პაროლი: " + password
+        );
+
+        // optional: clear data after alert
+        localStorage.removeItem("authEmail");
+        localStorage.removeItem("authPassword");
+    }
+
+    </script>
+</body>
+</html>
+

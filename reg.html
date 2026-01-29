@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./reg.css">
+    <title>Document</title>
+</head>
+<body>
+    <container class="container">
+        <div class="author">
+            <h1 style="text-align: center;" >ბუტიკი</h1>
+            <div class="bar" ></div>
+            <form action="./main.html">
+                <div>
+                    <p>სახელი</p>
+                    <input type="text" placeholder="თქვენი სახელი"></div>
+                <div>
+                    <p>გვარი</p>
+                    <input type="text" placeholder="თქვენი გვარი">
+                </div>
+                <div>
+                    <p>იმეილი</p>
+                    <input type="text" id="email" placeholder="შეიყვანეთ იმეილი">
+                    <small id="emailError" style="color:red; display:block;"></small>
+                </div>
+
+                <div>
+                    <p>პაროლი</p>
+                    <input type="password" id="password" placeholder="********">
+                    <small id="passwordStrength" style="display:block;"></small>
+                </div>
+
+               <div>
+                    <p>დაადასტურეთ პაროლი</p>
+                    <input type="password" id="confirmPassword" placeholder="********">
+                    <small id="confirmError" style="color:red; display:block;"></small>
+                </div>
+
+                <div>
+                    <p>რეგისტრაციის თარიღი</p>
+                    <input type="date" placeholder="01\01\1999" ></div>
+                <div>
+                <div>
+                    <p>ქვეყანა</p>
+                    <input type="text" placeholder="ქვეყანა"></div>
+                <div>
+                <div>
+                    <p>*ქალაქი</p>
+                    <input type="text" placeholder="ქალაქი"></div>
+                <div>
+                <div>
+                    <p>მობილურის ნომერი</p>
+                    <input type="text" placeholder="თქვენი ნომერი"></div>
+                <div>
+                <div >
+                     <input class="sign" type="submit" value="შექმენი ექაუნთი">
+                 </div>
+                
+            </form>
+        </div>
+    </container>
+    <script src="./reg.js"></script>
+</body>

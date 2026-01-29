@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<head>
+   <link rel="stylesheet" href="main.css">
+    
+   <title class="logo1">Medea</title>
+     
+    <div class="header" >
+        <div class="menu">
+            <ul class="menuList">
+                <li>სიახლე</li>
+                <li>კაცი</li>
+                <li>ქალი</li>
+                <li>აქსესუარები</li>
+                 <li><a style="color: black; text-decoration: none;" href="./author.html">ავტორიზაცია</a></li>
+                 <li><a style="color: black; text-decoration: none;" href="./reg.html">რეგისტრაცია</a></li>
+            </ul>
+        </div>
+
+        <div class="logo">
+            <h1 class="logo1">მედეა</h1>
+        </div>
+
+        <div class="icon">
+            <img class="icon1" src="./pics/search.png" alt="search">
+            <img class="icon1" src="./pics/person.png" alt="person">
+            <img class="icon1" src="./pics/cart.png" alt="cart">
+        </div>
+    </div>
+</head>
+
+<body class="site">
+  <div class="cover">
+        <h2 class="title">განავითარე შენი სტილი</h2>
+        <span class="text">აღმოაჩინეთ პრემიუმ კლასის ტანსაცმლის საუკეთესო კოლექცია,<br> რომელიც შექმნილია თანამედროვე ადამიანებისთვის.</span>
+        <div class="click">
+             <input class="shop" type="submit" value="იშოპინგე ახლავე">
+             <input class="view" type="submit" value="იხილე ახალი კოლექცია">
+        </div>
+  </div>
+  <center style="display: flex; flex-direction: column;">
+        <h2 class="text2">გამორჩეული კოლექციები</h2>
+        <p class="text3">ყველა შემთხვევისთვის შერჩეული სტილები</p>
+  </center>
+  <div class="collections">
+        <div class="wcoll">
+            <h2>ტანსაცმელი-ქალი</h2>
+            <input class="view" type="submit" value="იხილე მეტი">
+        </div>
+        <div class="mcoll">
+            <h2>ტანსაცმელი-კაცი</h2>
+            <input class="view" type="submit" value="იხილე მეტი">
+        </div>
+        <div class="acc">
+            <h2>აქსესუარები</h2>
+            <input class="view" type="submit" value="იხილე მეტი">
+        </div>
+  </div>
+  <div class="textContainer">
+            <div class="text6">
+                <h2 class="text4">სიახლე</h2>
+                <p class="text5">აღმოაჩინეთ ახალი კოლექცია</p>
+            </div>
+        <div class="butdiv">
+            <input class="blbut" type="submit" value="იხილე მეტი">
+        </div>
+        
+  </div>
+
+  <div class="imgContainer">
+    <div class="imageContainer">
+    <div class="newCont">
+         <div style="background-image: url(./pics/1.webp)" class="image1">
+             <h1 class="new">NEW</h1>
+             <div style="background-image: url(./pics/haurt.png)" class="hurt"> </div>
+         </div>
+    </div>
+    <div class="discription1">
+        <p class="shirt">მაისური</p>
+        <p class="price">$20</p>
+    </div>
+  </div>
+  <div class="imageContainer">
+    <div style="background-image: url(./pics/2.copy.jpg)" class="image1"></div>
+    <div class="discription1">
+        <p class="shirt">მაისური</p>
+        <p class="price">$20</p>
+    </div>
+  </div>
+  <div class="imageContainer">
+    <div style="background-image: url(./pics/2.webp)" class="image1"></div>
+    <div class="discription1">
+        <p class="shirt">მაისური</p>
+        <p class="price">$20</p>
+    </div>
+  </div>
+  <div class="imageContainer">
+    <div style="background-image: url(./pics/3.avif)" class="image1"> <h1 class="new">NEW</h1> </div>
+    <div class="discription1">
+        <p class="shirt">მაისური</p>
+        <p class="price">$20</p>
+    </div>
+  </div>
+  <div class="imageContainer">
+    <div style="background-image: url(./pics/4.webp)" class="image1"></div>
+    <div class="discription1">
+        <p class="shirt">მაისური</p>
+        <p class="price">$20</p>
+    </div>
+  </div>
+  
+    <div class="imageContainer">
+        <div style="background-image: url(./pics/5.webp)" class="image1"> <h1 class="new">NEW</h1> </div>
+        <div class="discription1">
+            <p class="shirt">მაისური</p>
+            <p class="price">$20</p>
+        </div>
+    </div>
+
+    <div class="hurt"></div>
+  </div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="socials">
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+
+        <p class="footer-text">
+            Author: Nino | © 2026
+        </p>
+    </div>
+</footer>
+
+</body>
+<script>
+    const email = localStorage.getItem("authEmail");
+    const password = localStorage.getItem("authPassword");
+
+    if (email && password) {
+        alert(
+            "წარმატებით გაიაზრეთ ავტორიზაცია\n\n" +
+            "იმეილი: " + email + "\n" +
+            "პაროლი: " + password
+        );
+
+        // optional: clear data after alert
+        localStorage.removeItem("authEmail");
+        localStorage.removeItem("authPassword");
+    }
+</script>
+
+<script>
+        const regData = JSON.parse(localStorage.getItem("regData"));
+    if (regData) {
+        let message = "წარმატებით გაიაზრეთ რეგისტრაცია\n\n";
+        for (const key in regData) {
+            message += `${key}: ${regData[key]}\n`;
+        }
+        alert(message);
+        localStorage.removeItem("regData"); // clean after showing
+    }
+
+    
+</script>
+
+</html>
